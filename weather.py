@@ -118,9 +118,20 @@ def get_weather_data(location, api_key):
         return None
 
 '''
-Galvenā funkcija, kas izveido datu bāzi, lasa šifrēto API atslēgu, atšifrē to, iegūst laika apstākļu datus,
-parāda tos un saglabā tos datu bāzē.
+Iegūst laika apstākļu datus no OpenWeatherMap API izmantojot norādīto atrašanās vietu un API atslēgu.
+
+Location:
+    name - norāda uz konkrētu vietu.
+    latitude un longitude - koordinātu dati, kas norāda uz konkrētu ģeogrāfisko atrašanās vietu.
+
+WeatherData:
+    description - laikapstākļi konkrētā vietā, lai informētu lietotāju par pašreizējiem laikapstākļiem.
+    temperature - temperatūra konkrētā vietā, lai informētu lietotāju par pašreizējo temperatūru.
+    feels_like - temperatūra, ņemot vērā vēja ātrumu un mitrumu, lai informētu lietotāju par to, kāda temperatūra šķiet, ņemot vērā šos faktorus.
+    high - augstākās dienas temperatūra, lai informētu lietotāju par dienas augstāko temperatūru.
+    low - zemākā dienas temperatūra, lai informētu lietotāju par dienas zemāko temperatūru
 '''
+def get_weather_data(location, api_key):
 def main():
     create_database()
 
